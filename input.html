@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input id="input1" type="text">
+    <button onclick="calculate()">Enter</button>
+    <p id="result"></p> -->
+    <p id="show"></p>
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <div>
+        <input id="pass1" type="password" placeholder="password">
+        <input id="pass2" type="password" placeholder="password">
+        <button onclick="enter()">Enter</button>
+        <p id="display"></p>
+    </div>
+</body>
+<script>
+
+
+    let fig = 0;
+    show.innerHTML= fig
+   
+  function add(){
+    if (fig == 10){
+        return ;
+    }else{
+        fig++;
+        show.innerHTML = fig;
+    }
+  }
+  function sub(){
+        if(fig == 0){
+            return ;
+        }else{
+            fig--;
+            show.innerHTML = fig;
+        }
+    }
+
+
+    let pass1 = document.getElementById("pass1")
+    let pass2 = document.getElementById("pass2")
+    let display = document.getElementById("display")
+
+    function enter(){
+        if(pass1.value === pass2.value){
+            display.innerHTML = "Password is correct";
+        }else{
+            display.innerHTML = "Incorrect password";
+        }
+    }
+  
+</script>
+</html>
